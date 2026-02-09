@@ -20,7 +20,7 @@ Vagrant.configure("2") do |config|
       vb.memory = "1024"
       vb.cpus = 1
     end
-    server.vm.provision "shell", path: "server.sh"
+    server.vm.provision "shell", path: "scripts/server.sh"
   end
 
   # Disable automatic box update checking. If you disable this, then

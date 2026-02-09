@@ -10,7 +10,7 @@ chown -R vagrant:vagrant /home/vagrant/.kube/config
 
 until kubectl get serviceaccount default &> /dev/null; do sleep 2; done
 
-kubectl apply -f /vagrant/pods/app1.yaml
-kubectl apply -f /vagrant/pods/app2.yaml
-kubectl apply -f /vagrant/pods/app3.yaml
-kubectl apply -f /vagrant/pods/ingress.yaml
+kubectl apply -f /vagrant/confs/app1.yaml
+kubectl apply -f /vagrant/confs/app2.yaml
+kubectl apply -f /vagrant/confs/app3.yaml
+kubectl apply -f /vagrant/confs/ingress.yaml
