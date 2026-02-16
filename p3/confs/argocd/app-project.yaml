@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: app-project
+  namespace: argocd
+spec:
+  description: "Playground projet for IOT-P3"
+  sourceRepos:
+  - 'https://github.com/Uilly93/iot-manifest'
+  destinations:
+  - namespace: dev # deploying only on dev namespace
+    server: https://kubernetes.default.svc
+  clusterResourceWhitelist:
+  - group: '*'
+    kind: '*'
